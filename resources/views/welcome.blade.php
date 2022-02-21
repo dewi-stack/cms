@@ -21,13 +21,11 @@
         </style>
     </head>
     <body class="antialiased">
-        <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
-            <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
-                <h1 class="text-grey-900 dark:text-white">
-                    Dewi Laylaturrohmah <br><br>
-                    Kelas: 2H, NIM: 2041720163
-                 </h1>
-            </div>
-        </div>
+        <a href="https://www.educastudio.com"> Home </a><br><br>
+        Project <br>
+        <a href="https://www.educastudio.com/category/marbel-edu-games"> Marbel Edu Games </a><br>
+        <a href ="https://www.educastudio.com/category/marbel-and-friends-kids-games"> Marbel and friends kids game </a></br>
+        <a href= "https://www.educastudio.com/category/riri-story-books"> Riri story books </a><br>
+        <a href="https://www.educastudio.com/category/kolak-kids-songs"> Kolak kids songs </a>
     </body>
 </html>
