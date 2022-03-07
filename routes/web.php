@@ -46,8 +46,9 @@ Route::get('/articles/{id}', [ArticleController::class,'articles']);
 
 */
 
- 
-Route::view('/', 'masterView');
-Route::view('/about', 'about');
-Route::view('/contact', 'contact');
 
+
+Route::get('/', [HomeController::class,'index']);
+Route::get('/home', [HomeController::class,'index']);
+Route::get('/about', [ArticleController::class,'about']);
+Route::get('/contact', [ArticleController::class,'contact']);
