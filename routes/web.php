@@ -46,10 +46,8 @@ Route::get('/articles/{id}', [ArticleController::class,'articles']);
 
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+ 
+Route::view('/', 'masterView');
+Route::view('/about', 'about');
+Route::view('/contact', 'contact');
 
-Route::group(['prefix' => 'project'], function()){
-    Route::get('/', '')
-}
