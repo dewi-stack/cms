@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Aboutus;
 use Illuminate\Http\Request;
 
 class ArticleController extends Controller
@@ -12,7 +13,8 @@ class ArticleController extends Controller
     }
 
     public function about(){
-        return view('/article/about');
+        $aboutuses=Aboutus::all();
+        return view('/article/about',compact('aboutuses'));
     }
 
     public function contact(){

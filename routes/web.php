@@ -50,5 +50,5 @@ Route::get('/articles/{id}', [ArticleController::class,'articles']);
 
 Route::get('/', [HomeController::class,'index']);
 Route::get('/home', [HomeController::class,'index']);
-Route::get('/about', [ArticleController::class,'about']);
+Route::get('/about', [AboutController::class,'about']);
 Route::get('/contact', [ArticleController::class,'contact']);
