@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PageController;
+use App\Http\Controllers\HomeMasterController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\ArticleController;
@@ -47,8 +48,20 @@ Route::get('/articles/{id}', [ArticleController::class,'articles']);
 */
 
 
-
-Route::get('/', [HomeController::class,'index']);
-Route::get('/home', [HomeController::class,'index']);
+/*
+Route::get('/', [HomeMasterController::class,'index']);
+Route::get('/login', [HomeController]);
+Route::get('/home', [HomeMasterController::class,'index']);
 Route::get('/about', [AboutController::class,'about']);
 Route::get('/contact', [ArticleController::class,'contact']);
+*/
+
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+/* Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
