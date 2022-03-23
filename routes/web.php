@@ -6,6 +6,13 @@ use App\Http\Controllers\HomeMasterController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\Auth\ConfirmPasswordController;
+use App\Http\Controllers\Auth\ForgoPasswordtController;
+use App\Http\Controllers\Auth\RegisterController;
+use App\Http\Controllers\Auth\ResetPasswordController;
+use App\Http\Controllers\Auth\VerificationController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -47,21 +54,20 @@ Route::get('/articles/{id}', [ArticleController::class,'articles']);
 
 */
 
-
 /*
+Auth::routes();
 Route::get('/', [HomeMasterController::class,'index']);
-Route::get('/login', [HomeController]);
+Route::get('login', [App\Http\Controllers\Auth\LoginController::class, 'username'])->name('login');
 Route::get('/home', [HomeMasterController::class,'index']);
 Route::get('/about', [AboutController::class,'about']);
 Route::get('/contact', [ArticleController::class,'contact']);
 */
 
-
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-/* Auth::routes();
+Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
